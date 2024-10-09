@@ -1,0 +1,4 @@
+pytorch 2.4.1
+torchvision 0.19.1
+Python 3.12.3
+IDE VS Code
