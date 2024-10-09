@@ -1,0 +1,3 @@
+Pthon Version: "Python 3.12.0"
+Pytorch Version: "2.4.1+cpu"
+IDE Using: Visual Studio Code
