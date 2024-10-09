@@ -1,0 +1,4 @@
+IDE = Jupyter Notebook
+Python Version = 3.11.7
+Pytorch Version = 2.4.1+cpu
+TorchVision = 0.19.1+cpu
