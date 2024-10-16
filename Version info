@@ -3,4 +3,4 @@ Version Information:
 Torch version: 2.4.1+cu121
 Torchvision version: 0.19.1+cu121
 Python Version: 3.13.0
-IDE vs code
+IDE: Google Colab
