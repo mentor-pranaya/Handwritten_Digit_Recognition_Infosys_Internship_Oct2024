@@ -1,0 +1,48 @@
+1. Multilayer Perceptrons (MLP):
+Multilayer Perceptrons (MLPs) are a type of feedforward neural network that consists of multiple layers of neurons: an input layer, one or more hidden layers, and an output layer. Each neuron in a layer is connected to every neuron in the next layer, making MLPs fully connected networks. The key feature of MLPs is the use of activation functions in the hidden layers, which introduces non-linearity, allowing the network to learn and model complex data patterns.
+
+Why Use MLP?
+
+MLPs are versatile and can be used for both classification and regression tasks.
+They can approximate any function given sufficient data and computational resources.
+In the context of this project (e.g., MNIST dataset), MLPs are used to recognize and classify handwritten digits by learning the mapping from the pixel data to the correct digit label.
+
+Key Components of MLP:
+
+Input Layer: Accepts the input data (e.g., pixel values of images).
+Hidden Layers: Multiple fully connected layers where each neuron performs a weighted sum of the inputs followed by an activation function.
+Output Layer: Produces the final prediction, e.g., class probabilities for classification tasks.
+
+2. Activation Functions:
+Activation functions introduce non-linearity into the network, enabling MLPs to model complex relationships in the data. Common activation functions include:
+
+  ReLU (Rectified Linear Unit): The most popular activation function. It outputs the input directly if it’s positive, otherwise, it outputs zero. It helps prevent the vanishing gradient problem.
+
+  Sigmoid: Outputs values between 0 and 1, commonly used for binary classification.
+
+  Tanh: Outputs values between -1 and 1, better for zero-centered data.
+
+  Softmax: Typically used in the output layer for multi-class classification. It converts raw output scores into probabilities that sum to 1.
+ 
+3. Loss Functions
+A loss function measures how far off a model's predictions are from the actual target values. The goal of training is to minimize this loss.
+
+  Cross Entropy Loss (for classification): Measures the difference between the predicted probability distribution and the true label. It’s commonly used in multi-class classification problems. This function applies a softmax internally when using nn.CrossEntropyLoss in PyTorch
+
+  Mean Squared Error (MSE): Commonly used for regression tasks, it computes the average squared difference between predicted and actual values.
+ 
+4. Optimizers
+An optimizer updates the weights of the neural network to minimize the loss function. The optimizer uses gradients computed during backpropagation to adjust the parameters.
+
+  SGD (Stochastic Gradient Descent): A basic optimizer that updates weights by computing the gradient of the loss function with respect to the weights for each mini-batch.
+
+  Adam (Adaptive Moment Estimation): A popular optimizer that combines the benefits of momentum and RMSprop. It adapts the learning rate for each parameter individually and is faster in convergence.
+
+5. Layers in MLP
+Layers are fundamental building blocks of neural networks. MLP consists of the following key types of layers:
+
+  Linear Layer (Fully Connected Layer): Each neuron in a layer is connected to every neuron in the next layer. This layer is used to compute a weighted sum of inputs plus a bias. In PyTorch, this is represented by nn.Linear(in_features, out_features).
+
+  Dropout Layer: This layer randomly sets a fraction of the input units to zero during training to prevent overfitting. It acts as a regularization technique. In PyTorch, represented by nn.Dropout(p), where p is the dropout probability.
+
+  Max Pooling Layer: Used primarily in convolutional networks, this layer reduces the spatial dimensions by taking the maximum value over a pooling window. It helps in downsampling the input while retaining important features. In PyTorch, represented by nn.MaxPool2d(kernel_size).
