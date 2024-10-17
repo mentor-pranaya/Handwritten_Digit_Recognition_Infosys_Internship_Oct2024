@@ -9,9 +9,13 @@ transform = transforms.Compose([
     transforms.Normalize((0.5,), (0.5,))  # Normalize the images with mean=0.5 and std=0.5
 ])
 
-# There where few more parameters are there for MNIST(root, train, transform, target_transform, download)
+# Download and load the MNIST dataset
 train_dataset = datasets.MNIST(root='./data', train=True, transform=transform, download=True)
+test_dataset = datasets.MNIST(root='./data', train=False, transform=transform)
+
+# Create DataLoader for training and test datasets
 train_loader = DataLoader(dataset=train_dataset, batch_size=64, shuffle=True)
+test_loader = DataLoader(dataset=test_dataset, batch_size=64, shuffle=False)
 
 
 def imshow(img, ax):
