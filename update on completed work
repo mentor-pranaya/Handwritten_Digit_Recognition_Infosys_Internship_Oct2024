@@ -1,17 +1,4 @@
-->Completed visualisation and normalization
 
-->Completed preprocessing. And the preprocessing steps include
-1.Loading the MNIST Dataset:(X_train, y_train), (X_test, y_test) = mnist.load_data()
-2.Normalization: X_train = X_train.astype('float32') / 255.0
-               X_test = X_test.astype('float32') / 255.0
-3.Reshaping (Flattening): 
-model = Sequential([
-    Flatten(input_shape=(28, 28)),  # Flatten 28x28 images to a 1D vector
-])
-4.One-Hot Encoding:
-y_train = to_categorical(y_train, 10)
-y_test = to_categorical(y_test, 10)
-5.Validation Split (during model training):model.fit(X_train, y_train, epochs=5, batch_size=32, validation_split=0.2)
 
 
 Done reading about:
